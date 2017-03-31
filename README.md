@@ -1,6 +1,9 @@
 # FullStack - Almundo
 Sistema de hoteles Almundo
 
+# Tablero Trello - Gestión del tareas del proyecto
+https://trello.com/b/hgoquOSW/fullstack-almundo
+
 # Componetes requeridos
 1. Descargar e instalar node.js (última version que viene con npm)
 2. Descargar e instalar mongoDB y ejecutar el archivo "mongod"

@@ -3,6 +3,7 @@ Sistema de hoteles Almundo
 
 # Tablero Trello - Gestión del tareas del proyecto
 https://trello.com/b/hgoquOSW/fullstack-almundo
+
 Se pueden visualizar las *HE* (horas estimadas) vs las *HC* (horas consumidas) de cada tarjeta en el apartado *comentarios* de la misma
 
 

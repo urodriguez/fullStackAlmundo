@@ -37,6 +37,8 @@ router.get('/hoteles', function(req, res) {
 app.use(router);
 
 // API routes
+var hotelRoutersHandler = require("./routersHandlers/hotelRoutersHandler").getHotelRoutersHandler(express);
+app.use('/api', hotelRoutersHandler);
 
 // Connection to DB
 mongoose.connect('mongodb://localhost/almundo', function(err, res) {  //se conecta a la base de datos

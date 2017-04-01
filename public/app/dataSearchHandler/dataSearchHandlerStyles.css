@@ -1,0 +1,20 @@
+.data-search-list {
+	box-sizing: border-box;
+	border: 1px solid grey;
+}
+	.data-search-list a {
+		font-size: 13px;
+		padding: 4px 8px 4px 8px;
+		margin-top: 0px;
+	}
+
+	.data-search-list p {
+		margin-top: 10px;
+		margin-bottom: 0px;
+		font-size: 17px;
+	}
+
+.menu-list {
+	padding: 0px;
+	margin-bottom: 10px;
+}

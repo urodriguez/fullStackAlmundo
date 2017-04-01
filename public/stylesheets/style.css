@@ -1,0 +1,100 @@
+/* General */
+body{
+	font-family: 'Roboto', sans-serif; /*defino la fuente que tendra el texto del body*/
+}
+
+/* Header */
+header{
+	background-color: darkblue; /*color del fondo del logo*/
+	padding-top: 25px; /*distancia entre el logo y la barra superior*/
+}
+
+.menu-header{
+	margin-top: 10px;
+  letter-spacing: normal;
+}
+  .menu-header li:not(:first-child){ /*defino estilo para los enlaces dentro del menu bar*/
+    display: inline-block;
+    height: 16px;
+    line-height: 1rem;
+    padding: 0 10px 0 10px;
+    position: relative;
+    border-left: 1px solid white;
+  }
+  .menu-header a{ /*defino estilo para los enlaces dentro del menu bar*/
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .menu-header a:hover{ /*defino estilo para cuando se pasa el mouse por encima*/
+    text-decoration: none; /*indico que cuando se pasa el mouse por encima no se subraya*/
+    color:#fff
+  }
+
+.menu-bar{
+	background-color: blue; /*color del fondo del menu bar*/
+	margin-top: 10px;
+  border-top: 1px solid white;
+}
+	.menu-bar a{ /*defino estilo para los enlaces dentro del menu bar*/
+		color: white;
+		font-size: 13px;
+    padding: 8px 16px 8px 16px;
+    font-weight: bold;
+	}
+	.menu-bar a:hover{ /*defino estilo para cuando se pasa el mouse por encima*/
+		text-decoration: none; /*indico que cuando se pasa el mouse por encima no se subraya*/
+		color:#fff
+	}
+	
+.menu-list{
+	padding: 12px;
+	margin-bottom: 0;
+}
+
+/* Main */
+#main > .container { /*del div con id "main" modifico el estilo del primer "container" que encuentre (no cambia el estilo de los otros)*/
+	box-shadow: 0 7px 18px rgba(0, 0 , 0, 0.5); /*sombra que le agrego a la caja (box -> container)*/
+	/*0 -> desplazamiento de la sombra en "x"*/
+	/*7px -> desplazamiento de la sombra en "y"*/
+	/*18px -> tamanio de la sombra*/
+	/*rgba(0, 0 , 0, 0.5) -> (0,0,0) sombra negra y 3er parametro trasparencia*/
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 15px;
+}
+
+
+/* Info Content */
+h2 {
+	font-size: 24px;
+	border-bottom: 1px solid #9e9e9e; /*establezco simultáneamente el grosor, estilo y color del borde inferior de un elemento - solid: lineas continuas*/
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+p {
+	font-size: 16px;
+}
+
+h3 {
+	font-size: 24px;
+	border-bottom: 1px solid #9e9e9e; /*establezco simultáneamente el grosor, estilo y color del borde inferior de un elemento - solid: lineas continuas*/
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+
+/* Healper */
+.mar-top40 { /*creo mi propia class mar-top40 que cuando se agrega a una class="row mar-top40" agrega un margin-top de 40px*/
+	margin-top: 40px; 
+}
+
+/* Footer */
+

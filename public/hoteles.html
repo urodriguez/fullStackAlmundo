@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hoteles baratos - Hoteles económicos | almundo.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	
+	<!-- Font Awesome CDN -->
+	<script src="https://use.fontawesome.com/c422ac8860.js"></script>
+
+	<!-- Angular 2 -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app/app_hotels/main').catch(function(err){ console.error(err); });
+    </script>
+
+    <!-- Para validar Inputs -->
+    <script src="js/validador.js"></script>
+
+	<!-- Main CSS -->
+	<!-- Por ser en cascada sobreescribe al que se habia definido antes (que seria el de bootstrap) -->
+	<link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+
+  </head>
+  <body>
+  	<noscript>
+  		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  	</noscript>
+
+	<header>
+	
+		<div class="container"> <!-- defino en el header un objecto container  -->
+			<div class="row"> <!-- inserto dentro del container una fila (y luego dos columnas)  -->
+				<div class="col-md-4"> <!-- defino el contenido de la primer columna | "col-md-8" es el formato del tamanio de la pantalla  -->
+					<img 
+						alt="Almundo.com vacaciones en serio" 
+						src="https://images.almundo.com/205/image/upload/v1474984918/static/components/logo-almundo.svg"
+					>
+				</div>
+				
+				<div class="col-md-8"> <!-- defino el contenido de la segunda columna | "col-md-4" es el formato del tamanio de la pantalla -->
+					<ul class="menu-header list-inline pull-right"> <!-- defino que sera una lista de elementos horizontales (inline)  -->
+						<li class="list-inline-item">
+							<a href="#">
+								<span>
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</span>
+								<span>
+									Ingresar
+								</span>
+							</a>
+						</li>
+
+						<li class="list-inline-item">
+							<a href="#">
+								<img 
+									alt="Club Almundo" 
+									src="https://images.almundo.com/205/image/upload/v1474987989/static/components/logo-clubalmundo.svg"
+								>
+							</a>
+						</li>
+
+						<li class="list-inline-item">
+							<a href="#">Sucursales</a>
+						</li>
+
+						<li class="list-inline-item">
+							<a href="#">
+								Llamanos
+								<i class="fa fa-angle-down" aria-hidden="true"></i>
+							</a>
+						</li>
+
+						<li class="list-inline-item">
+							<a href="#">Ayuda</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="menu-bar text-center">
+			<nav class="container" role="menu">
+				<ul class="menu-list list-inline">
+					<li class="list-inline-item">
+						<a href="#">Hoteles</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Vuelos</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Vuelo + Hotel</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Paquetes</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Disney</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Escapadas</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Seguros</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Autos</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">Cruceros</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">OFERTAS</a>
+					</li>
+
+					<li class="list-inline-item">
+						<a href="#">
+							Más
+							<i class="fa fa-angle-down" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		
+	</header>
+	
+	<hotels-app>Loading Hotels...</hotels-app>
+    
+	<footer>
+	
+	</footer>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>

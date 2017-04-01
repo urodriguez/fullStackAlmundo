@@ -1,0 +1,9 @@
+.contenedor-mapa-card{
+	box-shadow: 0 1px 3px rgba(0, 0 , 0, 0.5); /*sombra que le agrego a la caja (box -> container)*/
+	/*1er param -> desplazamiento de la sombra en "x"*/
+	/*2do param -> desplazamiento de la sombra en "y"*/
+	/*3er param -> tamanio de la sombra*/
+	/*rgba(0, 0 , 0, 0.5) -> (0,0,0) sombra negra y 3er parametro trasparencia*/
+	margin-top: 35px;
+	margin-bottom: 15px;
+}

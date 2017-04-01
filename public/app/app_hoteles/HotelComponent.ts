@@ -6,7 +6,8 @@ import { HotelServices } from '../services/HotelServices';
 
 @Component({
   selector: 'hoteles',
-  templateUrl: "app/app_hoteles/hotelComponent.html"
+  templateUrl: "app/app_hoteles/hotelComponent.html",
+  styleUrls: ["app/app_hoteles/hotelComponentStyles.css"]
 })
 
 export class HotelComponent {

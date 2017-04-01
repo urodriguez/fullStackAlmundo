@@ -15,17 +15,16 @@
 	<!-- Angular 2 -->
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
-
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
     <script src="systemjs.config.js"></script>
     <script>
-      System.import('app/app_hotels/main').catch(function(err){ console.error(err); });
+      System.import('app/app_hoteles/main').catch(function(err){ console.error(err); });
     </script>
 
     <!-- Para validar Inputs -->
-    <script src="js/validador.js"></script>
+    <!-- <script src="js/validador.js"></script> -->
 
 	<!-- Main CSS -->
 	<!-- Por ser en cascada sobreescribe al que se habia definido antes (que seria el de bootstrap) -->
@@ -47,7 +46,7 @@
 						src="https://images.almundo.com/205/image/upload/v1474984918/static/components/logo-almundo.svg"
 					>
 				</div>
-				
+
 				<div class="col-md-8"> <!-- defino el contenido de la segunda columna | "col-md-4" es el formato del tamanio de la pantalla -->
 					<ul class="menu-header list-inline pull-right"> <!-- defino que sera una lista de elementos horizontales (inline)  -->
 						<li class="list-inline-item">
@@ -144,7 +143,7 @@
 		
 	</header>
 	
-	<hotels-app>Loading Hotels...</hotels-app>
+	<hoteles-app>Loading Hotels...</hoteles-app>
     
 	<footer>
 	

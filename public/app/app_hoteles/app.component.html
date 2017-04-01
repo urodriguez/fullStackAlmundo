@@ -1,0 +1,42 @@
+<div class="container">
+
+	<div class="row"> <!-- inserto dentro del container una fila  -->
+		
+		<div class="col-md-12">
+			<router-handler 
+				[modulo]="'Hoteles'"
+				[destino]="'madrid'"
+			>
+			</router-handler>
+		</div>
+		
+	</div>
+
+	<div class="row"> <!-- inserto dentro del container una fila  -->
+		
+		<div class="col-md-12">
+			<data-search-handler 
+				[destino]="'madrid'"
+				[fechaIngreso]="'16/11/2016'"
+				[fechaSalida]="'30/11/2016'"
+				[cantDeHuespedes]="'2'"
+			>
+			</data-search-handler>
+		</div>
+		
+	</div>
+
+	<div class="row">
+	
+<!-- 		<div class="col-md-11">
+			<tabla-proveedores></tabla-proveedores>
+		</div>
+
+		<div class="col-md-1" style="padding-left: 0px;">
+			<agregar-proveedores></agregar-proveedores>
+		</div> -->
+	
+	</div>
+
+	
+</div>

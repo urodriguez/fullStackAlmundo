@@ -1,21 +1,30 @@
 <div class="row">
 
-	<div class="col-md-3"> <!-- defino el contenido de la primer columna -->
-		<div class="contenedor-mapa-card text-center">
-			<img src="../../images/maps.jpg" width="100%" height="105px"> <!-- width=100% forza la imagen para que ocupe el tamanio total de la columna manteniendo la relacion con el ancho -->
-			<a href="#">Ver hoteles en el mapa</a>
+	<div class="col-md-4"> <!-- defino el contenido de la primer columna -->
+
+		<div class="col-md-11">
+
+			<div class="contenedor-mapa-card text-center">
+				<img src="../../images/maps.jpg" width="100%" height="105px"> <!-- width=100% forza la imagen para que ocupe el tamanio total de la columna manteniendo la relacion con el ancho -->
+				<a href="#">Ver hoteles en el mapa</a>
+			</div>
+
+			<strong>Filtrar:</strong>
+
+			<name-filter (onNameFilterChange)="filterByName($event)"></name-filter>
+
+			<!-- 		<price-filter></price-filter>
+
+			<stars-filter></stars-filter> -->
 		</div>
-
-		<strong>Filtrar:</strong>
-
-<!-- 		<name-filter></name-filter>
-
-		<price-filter></price-filter>
-
-		<stars-filter></stars-filter> -->
-
 	</div>
 
-	<div class="col-md-9"> <!-- defino el contenido de la segunda columna -->
+	<div class="col-md-8"> <!-- defino el contenido de la segunda columna -->
+		<div *ngFor="let hotel of hoteles">
+			<div *ngIf="hotel != undefined">
+				{{hotel.name}}
+			</div>
+			
+		</div> 
 	</div>
 </div>

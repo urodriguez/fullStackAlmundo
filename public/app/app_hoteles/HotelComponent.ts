@@ -11,10 +11,12 @@ import { HotelServices } from '../services/HotelServices';
 })
 
 export class HotelComponent {
-  private hotelesDisponibles: Hotel[];
+  private hotelesCache: Hotel[]
+  private hoteles: Hotel[]
   
   constructor(private hService: HotelServices){
-    this.hotelesDisponibles = []
+    this.hotelesCache = []
+    this.hoteles = []
   }
 
   ngOnInit() {
@@ -29,8 +31,11 @@ export class HotelComponent {
     .getHoteles()
     .subscribe(
       (hoteles) => {
-        this.hotelesDisponibles = hoteles;
-        console.log(this.hotelesDisponibles);
+        this.hotelesCache = hoteles;
+
+        this.hoteles = this.hotelesCache
+
+        console.log(this.hotelesCache);
       },
       err => {
         console.error("EL ERROR FUE: ", err)
@@ -38,5 +43,10 @@ export class HotelComponent {
         window.location.reload(); 
       }
     );
+  }
+
+
+  filterByName(nameToFilter: string){
+    this.hoteles = this.hotelesCache.map(function(hotel) {if(hotel.name.indexOf(nameToFilter) != -1) return hotel})
   }
 }

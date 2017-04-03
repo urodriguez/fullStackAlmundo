@@ -1,0 +1,41 @@
+<div class="contenedor-name-filter-card">
+
+	<div class="name-filter-head">
+		<a href="#">
+			<span>
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</span>
+			<span>
+				<strong>Nombre de hotel</strong>
+			</span>
+		</a>
+	</div>
+
+
+	<div class="name-filter-body">
+
+		<div class="row">
+
+			<div class="col-md-8">
+				<input 
+					type="text" 
+					placeholder="Ingrese el nombre del hotel" 
+					#hotelName
+				>
+			</div>
+
+			<div class="col-md-4">
+				<button
+					type="button" 
+					class="btn btn-primary btn-sm"
+					placeholder="Filtrar"
+					(click)="fireNameFilterChange(hotelName.value)"
+				>
+					Aceptar		
+				</button>
+			</div>
+			
+		</div>
+	</div>
+</div>
+

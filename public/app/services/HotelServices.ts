@@ -16,7 +16,7 @@ export class HotelServices {
 
   getHoteles(): Observable<Hotel[]>  {
     console.log("HACIENDO REQUEST");
-    return this.http.get(URL_API_HOTELS).map((response) => response.json())
+    return this.http.get(URL_API_HOTELS).map((response) => response.json().hotels)
   }
 
 }

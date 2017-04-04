@@ -1,0 +1,76 @@
+<div class="contenedor-stars-filter-card">
+
+    <div class="stars-filter-head">
+        <a href="#">
+	        <span>
+		        <i class="fa fa-star" aria-hidden="true"></i>
+	        </span>
+	        <span>
+		        <strong>Estrellas</strong>
+	        </span>
+        </a>
+    </div>
+
+
+    <div class="stars-filter-body">
+        <div 
+        	class="checkbox"
+        	*ngIf="filteredStars.length == 0"
+        >
+          <label>
+            <input 
+            	type="checkbox"
+            	disabled="" 
+            	checked
+            	#cb 
+        	>
+            <strong>Todas las estrellas ({{hotels.length}})</strong>
+          </label>
+        </div>
+
+        <div 
+        	class="checkbox"
+        	*ngIf="filteredStars.length != 0"
+        >
+          <label>
+            <input 
+            	type="checkbox" 
+            	#cb 
+            	(change)="noFiltersAplied()"
+        	>
+            Todas las estrellas ({{hotels.length}})
+          </label>
+        </div>
+
+        <div *ngFor="let starDOM of starsDOM; let i = index">
+
+            <div class="checkbox">
+              <label>
+          		<input 
+          			*ngIf="showingAllStars"
+          			type="checkbox"
+          			#cb (change)="onFilteredStarsChange(i, cb.checked)"
+          		>
+
+          		<input 
+          			*ngIf="!showingAllStars && wasSelected(i)"
+          			type="checkbox" 
+          			checked 
+          			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
+
+          		<input 
+          			*ngIf="!showingAllStars && !wasSelected(i)"
+          			type="checkbox" 
+          			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
+
+	        	<label *ngFor="let sDOM of starDOM">
+					<i class="fa fa-star" aria-hidden="true"></i>
+	        	</label>
+
+                <a>({{numberStarsPerHotel[i]}})</a>
+              </label>
+            </div>
+        </div>
+
+    </div>
+</div>

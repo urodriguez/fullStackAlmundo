@@ -5,8 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { RouterHandlerComponent} from '../routerHandler/routerHandlerComponent';
-import { DataSearchHandlerComponent} from '../dataSearchHandler/dataSearchHandlerComponent';
-import { NameFilterComponent} from '../nameFilter/nameFilterComponent';
+import { DataSearchHandlerComponent} from '../dataSearchHandler/DataSearchHandlerComponent';
+import { NameFilterComponent} from '../nameFilter/NameFilterComponent';
+import { StarsFilterComponent} from '../starsFilter/StarsFilterComponent';
 import { HotelComponent} from './HotelComponent';
 
 import { HotelServices} from '../services/HotelServices';
@@ -22,6 +23,7 @@ import { HotelServices} from '../services/HotelServices';
     RouterHandlerComponent,
     DataSearchHandlerComponent,
     NameFilterComponent,
+    StarsFilterComponent,
     HotelComponent
   ],
   providers: [ HotelServices ],

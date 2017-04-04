@@ -38,8 +38,6 @@ export class Filtrador {
 	filtrar(): Hotel[]{
 		let hotelesAfiltrar: Hotel[] = this.hoteles.slice(0)
 
-		console.log(hotelesAfiltrar)
-		
 		for(let filtro of this.filtros){
 			if(filtro != undefined) {
 				hotelesAfiltrar = filtro.filtrar(hotelesAfiltrar)

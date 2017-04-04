@@ -4,6 +4,9 @@ import { Response } from '@angular/http';
 import { Hotel } from '../models/Hotel';
 import { HotelServices } from '../services/HotelServices';
 
+import { Filtrador} from "../filters/Filtrador"
+import { FiltradorPorNombre} from "../filters/FiltradorPorNombre"
+
 @Component({
   selector: 'hoteles',
   templateUrl: "app/app_hoteles/hotelComponent.html",
@@ -13,10 +16,13 @@ import { HotelServices } from '../services/HotelServices';
 export class HotelComponent {
   private hotelesCache: Hotel[]
   private hoteles: Hotel[]
+  private filtrador: Filtrador
   
   constructor(private hService: HotelServices){
     this.hotelesCache = []
     this.hoteles = []
+
+
   }
 
   ngOnInit() {
@@ -31,8 +37,12 @@ export class HotelComponent {
     .getHoteles()
     .subscribe(
       (hoteles) => {
+        
+        
         this.hotelesCache = hoteles;
 
+        this.filtrador = new Filtrador(this.hotelesCache)
+        
         this.hoteles = this.hotelesCache
 
         console.log(this.hotelesCache);
@@ -46,7 +56,11 @@ export class HotelComponent {
   }
 
 
-  filterByName(hotelesFiltrados: Hotel[]){
-    this.hoteles = hotelesFiltrados
+  filterByName(nameToFilter: string){
+    //this.hoteles = this.hotelesCache.map(function(hotel) {if(hotel.name.indexOf(nameToFilter) != -1) return hotel})
+    this.filtrador.agregarFiltroPorNombre(new FiltradorPorNombre(nameToFilter))
+
+    this.hoteles = this.filtrador.filtrar()
+
   }
 }

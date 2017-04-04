@@ -1,6 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-import { Hotel } from "../models/Hotel"
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'name-filter',
@@ -8,16 +6,16 @@ import { Hotel } from "../models/Hotel"
   styleUrls: ["app/nameFilter/nameFilterStyles.css"]
 })
 export class NameFilterComponent {
-  @Input() hotelsToFilter: Hotel[]
-  @Output() onNameFilterChange: EventEmitter<Hotel[]>
+  @Output() onNameFilterChange: EventEmitter<string>
 
   constructor(){
-    this.onNameFilterChange = new EventEmitter<Hotel[]>()
+    this.onNameFilterChange = new EventEmitter<string>()
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   fireNameFilterChange(nameToFilter: string){
-    this.onNameFilterChange.emit(this.hotelsToFilter.map(function(hotel) {if(hotel.name.indexOf(nameToFilter) != -1) return hotel}))
+    this.onNameFilterChange.emit(nameToFilter)
   }
 }

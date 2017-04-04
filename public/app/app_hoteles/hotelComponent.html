@@ -11,11 +11,7 @@
 
 			<strong>Filtrar:</strong>
 
-			<name-filter 
-				[hotelsToFilter]="hotelesCache"
-				(onNameFilterChange)="filterByName($event)"
-			>
-			</name-filter>
+			<name-filter (onNameFilterChange)="filterByName($event)"></name-filter>
 
 			<!-- 		<price-filter></price-filter>
 

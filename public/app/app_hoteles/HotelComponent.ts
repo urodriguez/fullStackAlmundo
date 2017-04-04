@@ -46,7 +46,7 @@ export class HotelComponent {
   }
 
 
-  filterByName(nameToFilter: string){
-    this.hoteles = this.hotelesCache.map(function(hotel) {if(hotel.name.indexOf(nameToFilter) != -1) return hotel})
+  filterByName(hotelesFiltrados: Hotel[]){
+    this.hoteles = hotelesFiltrados
   }
 }

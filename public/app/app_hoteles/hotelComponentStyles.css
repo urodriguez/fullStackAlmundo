@@ -1,10 +1,13 @@
+.col-md-12{
+	padding-right: 0px
+}
 .contenedor-sort{
 	margin-top: 5px;
 	margin-bottom: 5px;
 	float: right;
 	line-height: 1rem;
 	font-size: 0.875rem;
-	text-align: center;
+	text-align: right;
 }
 	.contenedor-sort label{
 		font-size: 0.75rem;
@@ -23,12 +26,19 @@
 		font-weight: normal;
 	}
 
+.col-md-4{
+	padding-left: 0px
+}
+
+.col-md-11{
+	padding-left: 0px
+}
+
 .contenedor-mapa-card{
-	box-shadow: 0 1px 3px rgba(0, 0 , 0, 0.5); /*sombra que le agrego a la caja (box -> container)*/
+	box-shadow: 0 1px 2px rgba(0, 0 , 0, 0.3); /*sombra que le agrego a la caja (box -> container)*/
 	/*1er param -> desplazamiento de la sombra en "x"*/
 	/*2do param -> desplazamiento de la sombra en "y"*/
 	/*3er param -> tamanio de la sombra*/
-	/*rgba(0, 0 , 0, 0.5) -> (0,0,0) sombra negra y 3er parametro trasparencia*/
-	margin-top: 35px;
+	/*rgba(0, 0 , 0, 0.3) -> (0,0,0) sombra negra y 3er parametro trasparencia*/
 	margin-bottom: 15px;
 }

@@ -1,20 +1,21 @@
-.data-search-list {
+.contenedor-search{
 	box-sizing: border-box;
 	border: 1px solid grey;
+	padding: 8px 16px 0px 16px;
 }
-	.data-search-list a {
-		font-size: 13px;
-		padding: 4px 8px 4px 8px;
-		margin-top: 0px;
-	}
 
-	.data-search-list p {
-		margin-top: 10px;
-		margin-bottom: 0px;
-		font-size: 17px;
-	}
+.search-head{
+	margin-top: 10px;
+	line-height: 1.5rem;
+	font-size: 1.25rem;
+	font-weight: normal;
 
-.menu-list {
-	padding: 0px;
-	margin-bottom: 10px;
+}
+
+.search-values{
+	margin-top: 10px;
+	line-height: 1.5rem;
+	font-size: 0.875rem;
+	list-style-position: inside;
+	margin-bottom: 8px;
 }

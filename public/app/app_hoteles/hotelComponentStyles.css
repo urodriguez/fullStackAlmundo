@@ -1,3 +1,28 @@
+.contenedor-sort{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: right;
+	line-height: 1rem;
+	font-size: 0.875rem;
+	text-align: center;
+}
+	.contenedor-sort label{
+		font-size: 0.75rem;
+		display: inline-block;
+		margin-right: 8px;
+		line-height: 24px !important;
+	}
+	.contenedor-sort select{
+		line-height: 1rem;
+		font-size: 0.75rem;
+		height: 24px;
+		border-color: #CCC;
+		border-top-color: #777;
+		font-family: 'Roboto', sans-serif;
+		color: #444;
+		font-weight: normal;
+	}
+
 .contenedor-mapa-card{
 	box-shadow: 0 1px 3px rgba(0, 0 , 0, 0.5); /*sombra que le agrego a la caja (box -> container)*/
 	/*1er param -> desplazamiento de la sombra en "x"*/

@@ -10,7 +10,6 @@ export class Filtrador {
 
 	constructor(hoteles: Hotel[]){
 		this.hoteles = []
-		console.log(hoteles)
 
 		for (var i = 0; i < hoteles.length; ++i) {
 			this.hoteles

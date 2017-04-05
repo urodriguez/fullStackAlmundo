@@ -15,7 +15,7 @@ export class FiltradorPorNombre implements IFiltro {
 		console.log(hoteles)
 
 		for(let h of hoteles) {
-			if(h.name.indexOf(this.nombreAfiltrar) != -1) {
+			if(h.name.toLowerCase().indexOf(this.nombreAfiltrar.toLowerCase()) != -1) {
 				hotelesFiltrados.push(h)
 			}
 		}

@@ -2,6 +2,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Hotel} from '../models/Hotel';
 
+declare var noUiSlider: any;
+
 @Component({
   selector: 'price-filter',
   templateUrl: "app/priceFilter/priceFilterComponent.html",
@@ -45,7 +47,7 @@ export class PriceFilterComponent {
       this.getMinPrice()
       this.getMaxPrice()
 
-      var slider = document.getElementById('slider');
+      var slider = <any> document.getElementById('slider');
 
       noUiSlider.create(slider, {
         start: [this.minPrice, this.maxPrice],
@@ -55,14 +57,14 @@ export class PriceFilterComponent {
           'min': this.minPrice - 100,
           'max': this.maxPrice + 100
         },
-      format: {
-        to: function ( value:any ) {
-          return value;
-        },
-        from: function ( value:any ) {
-          return value.replace('', '');
-        }
-      }
+      	format: {
+        	to: function ( value:any ) {
+          	return value;
+        	},
+        	from: function ( value:any ) {
+          	return value.replace('', '');
+        	}
+      	}
       });
 
       slider.noUiSlider.on('update', this.OnDataUpdate.bind(this));

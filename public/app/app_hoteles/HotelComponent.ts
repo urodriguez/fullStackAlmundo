@@ -73,9 +73,6 @@ export class HotelComponent {
   }
 
   filterByPrice(pricesToFilter: number[]){
-    console.log("pricesToFilter")
-    console.log(pricesToFilter)
-
     this.filtrador.agregarFiltroPorPrecios(new FiltradorPorPrecios(pricesToFilter))
 
     this.hoteles = this.filtrador.filtrar()

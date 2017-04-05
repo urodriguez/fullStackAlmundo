@@ -9,12 +9,6 @@ export class FiltradorPorPrecios implements IFiltro {
 	}
 
 	filtrar(hoteles: Hotel[]): Hotel[]{
-		console.log("hoteles")
-		console.log(hoteles)
-
-		console.log("this.preciosAfiltrar")
-		console.log(this.preciosAfiltrar)
-
 		let hotelesFiltrados: Hotel[] = []
 
 		for(let h of hoteles) {
@@ -22,9 +16,6 @@ export class FiltradorPorPrecios implements IFiltro {
 				hotelesFiltrados.push(h)
 			}
 		}
-
-		console.log("hotelesFiltrados")
-		console.log(hotelesFiltrados)
 
 		return hotelesFiltrados
 	}

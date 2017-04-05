@@ -7,6 +7,7 @@ import { HotelServices } from '../services/HotelServices';
 import { Filtrador} from "../filters/Filtrador"
 import { FiltradorPorNombre} from "../filters/FiltradorPorNombre"
 import { FiltradorPorEstrellas} from "../filters/FiltradorPorEstrellas"
+import { FiltradorPorPrecios} from "../filters/FiltradorPorPrecios"
 
 @Component({
   selector: 'hoteles',
@@ -27,8 +28,7 @@ export class HotelComponent {
   }
 
   ngOnInit() {
-    console.log("ON INIT");
-    //this.cargarHotelesDisponibles();
+    console.log("ON INIT HOTEL");
   }
 
   cargarHotelesDisponibles(){
@@ -67,6 +67,16 @@ export class HotelComponent {
     console.log(starsToFilter)
 
     this.filtrador.agregarFiltroPorEstrellas(new FiltradorPorEstrellas(starsToFilter))
+
+    this.hoteles = this.filtrador.filtrar()
+    
+  }
+
+  filterByPrice(pricesToFilter: number[]){
+    console.log("pricesToFilter")
+    console.log(pricesToFilter)
+
+    this.filtrador.agregarFiltroPorPrecios(new FiltradorPorPrecios(pricesToFilter))
 
     this.hoteles = this.filtrador.filtrar()
     

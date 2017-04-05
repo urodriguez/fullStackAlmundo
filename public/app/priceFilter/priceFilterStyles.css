@@ -1,4 +1,4 @@
-.contenedor-name-filter-card{
+.contenedor-price-filter-card{
 	box-shadow: 0 1px 2px rgba(0, 0 , 0, 0.3); /*sombra que le agrego a la caja (box -> container)*/
 	/*1er param -> desplazamiento de la sombra en "x"*/
 	/*2do param -> desplazamiento de la sombra en "y"*/
@@ -8,17 +8,17 @@
 	padding: 8px 16px;
 }
 
-.name-filter-head{
+.price-filter-head a{
 	line-height: 2rem;
 	font-size: 13px;
 	color: #157ab1;
 }
 
 
-.name-filter-body{
-	margin-top: 8px;
+.price-filter-body{
+	margin-top: 12px;
 }
-	.name-filter-body input{
+	.price-filter-body input{
 		border-color: #CCC;
 		border-top-color: #777;
 		color: #555;
@@ -29,4 +29,11 @@
 		border-radius: 2px;
 		box-sizing: border-box;
 		width: 100%;
+	}
+
+.price-filter-values{
+	margin-top: 8px;
+}
+	.price-filter-values strong{
+		font-size: 0.875rem;
 	}

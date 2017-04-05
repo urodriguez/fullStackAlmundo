@@ -13,7 +13,7 @@
 
 			<name-filter (onNameFilterChange)="filterByName($event)"></name-filter>
 
-			<!-- <price-filter></price-filter> -->
+			<price-filter [hotels]="hotelesCache" (onPriceFilterChange)="filterByPrice($event)"></price-filter>
 
 			<stars-filter [hotels]="hotelesCache" (onStarsFilterChange)="filterByStars($event)"></stars-filter>
 		</div>

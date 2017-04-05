@@ -7,6 +7,7 @@ import { AppComponent }  from './app.component';
 import { RouterHandlerComponent} from '../routerHandler/routerHandlerComponent';
 import { DataSearchHandlerComponent} from '../dataSearchHandler/DataSearchHandlerComponent';
 import { NameFilterComponent} from '../nameFilter/NameFilterComponent';
+import { PriceFilterComponent} from '../priceFilter/PriceFilterComponent';
 import { StarsFilterComponent} from '../starsFilter/StarsFilterComponent';
 import { HotelComponent} from './HotelComponent';
 
@@ -23,6 +24,7 @@ import { HotelServices} from '../services/HotelServices';
     RouterHandlerComponent,
     DataSearchHandlerComponent,
     NameFilterComponent,
+    PriceFilterComponent,
     StarsFilterComponent,
     HotelComponent
   ],

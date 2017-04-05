@@ -2,6 +2,8 @@ import { IFiltro } from "./IFiltro"
 
 import { Hotel } from "../models/Hotel"
 
+const CANT_FILTROS_DISPONIBLES = 3
+
 export class Filtrador {
 	private hoteles: Hotel[]
 	private filtros: IFiltro[]
@@ -20,14 +22,18 @@ export class Filtrador {
 					hoteles[i].price,
 				))
 		}
-		this.filtros = [undefined, undefined, undefined]
+
+		this.filtros = []
+		for (var i = 0; i < CANT_FILTROS_DISPONIBLES; ++i) {
+			this.filtros.push(undefined)
+		}
 	}
 
 	agregarFiltroPorNombre(filtro: IFiltro){
 		this.filtros[0] = filtro
 	}
 
-	agregarFiltroPorPrecio(filtro: IFiltro){
+	agregarFiltroPorPrecios(filtro: IFiltro){
 		this.filtros[1] = filtro
 	}
 

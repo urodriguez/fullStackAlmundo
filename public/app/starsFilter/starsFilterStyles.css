@@ -11,12 +11,14 @@
 
 
 .stars-filter-head{
-	font-size: 12px;
+	line-height: 2rem;
+	font-size: 13px;
+	color: #157ab1;
 }
 
 
 .stars-filter-body{
-	margin-top: 16px;
+	margin-top: 12px;
 }
 	.stars-filter-body input{
 		margin-right: 4px

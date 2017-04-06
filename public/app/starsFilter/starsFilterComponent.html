@@ -1,18 +1,26 @@
 <div class="contenedor-stars-filter-card">
 
-    <div class="stars-filter-head">
+    <div class="stars-filter-head" (click)="changeStatusBody()">
         <a>
 	        <span>
 		        <i class="fa fa-star" aria-hidden="true"></i>
 	        </span>
+
 	        <span>
 		        <strong>Estrellas</strong>
 	        </span>
+
+            <span *ngIf="showingBody">
+                <i class="fa fa-caret-up" aria-hidden="true"></i>
+            </span>
+            <span *ngIf="!showingBody">
+                <i class="fa fa-caret-down" aria-hidden="true"></i>
+            </span>
         </a>
     </div>
 
 
-    <div class="stars-filter-body">
+    <div class="stars-filter-body" *ngIf="showingBody">
         <div 
         	class="checkbox"
         	*ngIf="filteredStars.length == 0"

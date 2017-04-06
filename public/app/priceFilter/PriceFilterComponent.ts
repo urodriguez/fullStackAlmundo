@@ -16,8 +16,11 @@ export class PriceFilterComponent {
   private minPrice: number
   private maxPrice: number
 
+  private showingBody: boolean
+
   constructor(){
     this.onPriceFilterChange = new EventEmitter<any>()
+    this.showingBody = true
   }
 
   getMinPrice(){
@@ -40,6 +43,10 @@ export class PriceFilterComponent {
 
   ngOnInit() {
     console.log("ON INIT PRICE");
+  }
+
+  changeStatusBody(){
+    this.showingBody = (this.showingBody ? false : true)
   }
 
   ngOnChanges() {

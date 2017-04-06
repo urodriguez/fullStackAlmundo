@@ -1,18 +1,26 @@
 <div class="contenedor-name-filter-card">
 
-	<div class="name-filter-head">
+	<div class="name-filter-head" (click)="changeStatusBody()">
 		<a>
 			<span>
 				<i class="fa fa-search" aria-hidden="true"></i>
 			</span>
+
 			<span>
 				<strong>Nombre de hotel</strong>
+			</span>
+
+			<span *ngIf="showingBody">
+				<i class="fa fa-caret-up" aria-hidden="true"></i>
+			</span>
+			<span *ngIf="!showingBody">
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
 			</span>
 		</a>
 	</div>
 
 
-	<div class="name-filter-body">
+	<div class="name-filter-body" [hidden]="!showingBody">
 
 		<div class="row">
 

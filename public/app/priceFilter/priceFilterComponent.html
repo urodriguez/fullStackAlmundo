@@ -1,18 +1,26 @@
 <div class="contenedor-price-filter-card">
 
-    <div class="price-filter-head">
+    <div class="price-filter-head" (click)="changeStatusBody()">
         <a>
 	        <span>
 		        <i class="fa fa-usd" aria-hidden="true"></i>
 	        </span>
+
 	        <span>
 		        <strong>Precio por noche</strong>
 	        </span>
+
+			<span *ngIf="showingBody">
+				<i class="fa fa-caret-up" aria-hidden="true"></i>
+			</span>
+			<span *ngIf="!showingBody">
+				<i class="fa fa-caret-down" aria-hidden="true"></i>
+			</span>
         </a>
     </div>
 
 
-    <div class="price-filter-body">
+    <div class="price-filter-body" [hidden]="!showingBody">
 		<div id="slider"></div>
 
 		<div class="price-filter-values">

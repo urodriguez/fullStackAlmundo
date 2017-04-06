@@ -8,11 +8,18 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class NameFilterComponent {
   @Output() onNameFilterChange: EventEmitter<string>
 
+  private showingBody: boolean
+
   constructor(){
     this.onNameFilterChange = new EventEmitter<string>()
+    this.showingBody = true
   }
 
   ngOnInit() {
+  }
+
+  changeStatusBody(){
+    this.showingBody = (this.showingBody ? false : true)
   }
 
   fireNameFilterChange(nameToFilter: string){

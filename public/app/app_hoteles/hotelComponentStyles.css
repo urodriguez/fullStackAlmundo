@@ -56,12 +56,11 @@
 }
 
 .contenedor-hotel{
-	box-shadow: 0 1px 2px rgba(0, 0 , 0, 0.3); /*sombra que le agrego a la caja (box -> container)*/
-	/*1er param -> desplazamiento de la sombra en "x"*/
-	/*2do param -> desplazamiento de la sombra en "y"*/
-	/*3er param -> tamanio de la sombra*/
-	/*rgba(0, 0 , 0, 0.3) -> (0,0,0) sombra negra y 3er parametro trasparencia*/
-	width: 100%
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	box-shadow: 0px 1px 3px 0px rgba(119, 119, 119, 0.3);
+	margin-bottom: 16px;
 }
 	.contenedor-hotel-photo{
 		margin-top: 5px;
@@ -73,6 +72,7 @@
 			overflow: hidden;
 			background-size: cover;
 			background-position: 50%;
+			background-color: #777;
 			width: 100%;
 		}
 

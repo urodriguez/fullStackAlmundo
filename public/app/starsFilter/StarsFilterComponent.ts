@@ -21,6 +21,8 @@ export class StarsFilterComponent {
 
   private starsDOM: Array<Array<number>>
 
+  private showingBody: boolean
+
   constructor(){
     this.onStarsFilterChange = new EventEmitter<number[]>()
 
@@ -41,12 +43,18 @@ export class StarsFilterComponent {
     this.filteredStars = []
 
     this.showingAllStars = true
+
+    this.showingBody = true
   }
 
   ngOnChanges(){
     for (var i = 0; i < this.hotels.length; ++i) {
       this.numberStarsPerHotel[NUMBER_OF_STARS - this.hotels[i].stars]++
     }
+  }
+
+  changeStatusBody(){
+    this.showingBody = (this.showingBody ? false : true)
   }
   
   noFiltersAplied(){

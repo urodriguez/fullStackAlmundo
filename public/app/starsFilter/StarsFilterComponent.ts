@@ -34,7 +34,7 @@ export class StarsFilterComponent {
       this.numberStarsPerHotel.push(0)
     }
 
-    console.log(this.availableStars)
+    //console.log(this.availableStars)
 
     for (var j = 0; j < this.availableStars.length; ++j) {
     	this.starsDOM[j] = new Array(this.availableStars[j]);

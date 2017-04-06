@@ -24,8 +24,8 @@ export class FiltradorPorEstrellas implements IFiltro {
 				}
 			}
 
-			console.log("hotelesFiltrados")
-			console.log(hotelesFiltrados)
+			/*console.log("hotelesFiltrados")
+			console.log(hotelesFiltrados)*/
 
 			return hotelesFiltrados
 		}

@@ -12,7 +12,7 @@ export class RouterHandlerComponent {
   constructor(){}
 
   ngOnInit() {
-      console.log("modulo= " + this.modulo);
-      console.log("destino= " + this.destino);
+/*      console.log("modulo= " + this.modulo);
+      console.log("destino= " + this.destino);*/
   }
 }

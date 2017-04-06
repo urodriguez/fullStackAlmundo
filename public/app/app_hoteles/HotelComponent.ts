@@ -28,11 +28,11 @@ export class HotelComponent {
   }
 
   ngOnInit() {
-    console.log("ON INIT HOTEL");
+    //console.log("ON INIT HOTEL");
   }
 
   cargarHotelesDisponibles(){
-    console.log("CARGANDO HOTELES");
+    //console.log("CARGANDO HOTELES");
     // en el momento del subscribe es cuando se dispara la llamada
     this.hService
     .getHoteles()
@@ -44,10 +44,10 @@ export class HotelComponent {
         
         this.hoteles = this.hotelesCache
 
-        console.log(this.hotelesCache);
+        //console.log(this.hotelesCache);
       },
       err => {
-        console.error("EL ERROR FUE: ", err)
+        //console.error("EL ERROR FUE: ", err)
         alert("\t\t\t\t¡Error al cargar los hoteles!\n\nPulse 'Aceptar' para recargar la pagina");
         window.location.reload(); 
       }

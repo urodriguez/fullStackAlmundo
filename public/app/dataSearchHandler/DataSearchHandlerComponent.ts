@@ -15,9 +15,9 @@ export class DataSearchHandlerComponent {
   constructor(){}
 
   ngOnInit() {
-      console.log("destino= " + this.destino);
+/*      console.log("destino= " + this.destino);
       console.log("fechaIngreso= " + this.fechaIngreso);
       console.log("fechaSalida= " + this.fechaSalida);
-      console.log("cantDeHuespedes= " + this.cantDeHuespedes);
+      console.log("cantDeHuespedes= " + this.cantDeHuespedes);*/
   }
 }

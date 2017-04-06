@@ -42,7 +42,7 @@ export class PriceFilterComponent {
   }
 
   ngOnInit() {
-    console.log("ON INIT PRICE");
+    //console.log("ON INIT PRICE");
   }
 
   changeStatusBody(){

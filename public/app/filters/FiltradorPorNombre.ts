@@ -11,8 +11,8 @@ export class FiltradorPorNombre implements IFiltro {
 	filtrar(hoteles: Hotel[]): Hotel[]{
 		let hotelesFiltrados: Hotel[] = []
 
-		console.log("filtrando por nombre: " + this.nombreAfiltrar + " los hoteles=")
-		console.log(hoteles)
+		/*console.log("filtrando por nombre: " + this.nombreAfiltrar + " los hoteles=")
+		console.log(hoteles)*/
 
 		for(let h of hoteles) {
 			if(h.name.toLowerCase().indexOf(this.nombreAfiltrar.toLowerCase()) != -1) {
@@ -20,8 +20,8 @@ export class FiltradorPorNombre implements IFiltro {
 			}
 		}
 
-		console.log("hotelesFiltrados")
-		console.log(hotelesFiltrados)
+		/*console.log("hotelesFiltrados")
+		console.log(hotelesFiltrados)*/
 
 		return hotelesFiltrados
 	}

@@ -11,11 +11,11 @@ export class HotelServices {
   private proveedores: Array<any>;
 
   constructor(private http:Http) {
-    console.log("INICIALIZANDO hoteles SERVIRCE");
+    //console.log("INICIALIZANDO hoteles SERVIRCE");
   }
 
   getHoteles(): Observable<Hotel[]>  {
-    console.log("HACIENDO REQUEST");
+    //console.log("HACIENDO REQUEST");
     return this.http.get(URL_API_HOTELS).map((response) => response.json().hotels)
   }
 

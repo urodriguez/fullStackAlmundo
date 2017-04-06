@@ -56,16 +56,12 @@ export class HotelComponent {
 
 
   filterByName(nameToFilter: string){
-    //this.hoteles = this.hotelesCache.map(function(hotel) {if(hotel.name.indexOf(nameToFilter) != -1) return hotel})
     this.filtrador.agregarFiltroPorNombre(new FiltradorPorNombre(nameToFilter))
 
     this.hoteles = this.filtrador.filtrar()
   }
 
   filterByStars(starsToFilter: number[]){
-    console.log("starsToFilter")
-    console.log(starsToFilter)
-
     this.filtrador.agregarFiltroPorEstrellas(new FiltradorPorEstrellas(starsToFilter))
 
     this.hoteles = this.filtrador.filtrar()

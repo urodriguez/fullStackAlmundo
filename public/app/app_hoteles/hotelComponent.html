@@ -38,7 +38,79 @@
 
 	<div class="col-md-8"> <!-- defino el contenido de la segunda columna -->
 		<div *ngFor="let hotel of hoteles">
-			{{hotel.name}}
+			
+			<div class="container contenedor-hotel">
+			<div class="row">
+					<div class="col-md-4">
+						<div class="contenedor-hotel-photo">
+							<img class="img-fluid" [src]="hotel.imageURL">
+						</div>
+					</div>
+
+					<div class="col-md-5">
+						<div class="contenedor-hotel-data">
+							<div>
+								<strong>{{hotel.name}}</strong>
+							</div>
+
+							<div class="contenedor-hotel-data-stars">
+								<i class="fa fa-star" aria-hidden="true"></i>
+								<i *ngIf="hotel.stars >= 2" class="fa fa-star" aria-hidden="true"></i>
+								<i *ngIf="hotel.stars >= 3" class="fa fa-star" aria-hidden="true"></i>
+								<i *ngIf="hotel.stars >= 4" class="fa fa-star" aria-hidden="true"></i>
+								<i *ngIf="hotel.stars >= 5" class="fa fa-star" aria-hidden="true"></i>
+							</div>
+
+							<a>
+								<span>
+									<i class="fa fa-bed" aria-hidden="true"></i>
+								</span>
+								<span>
+									<strong>Solo la habitación</strong>
+								</span>
+							</a>
+
+							<div>
+								<i class="fa fa-glass" aria-hidden="true"></i>
+								<i class="fa fa-coffee" aria-hidden="true"></i>
+								<i class="fa fa-wifi" aria-hidden="true"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="contenedor-hotel-price text-center">
+						
+							<div class="container">
+								<label>Precio por noche por habitación</label>
+
+								<p>
+									<span class="contenedor-hotel-price-type">
+										ARS
+									</span>
+
+									<span class="contenedor-hotel-price-value">
+										{{hotel.price}}
+									</span>
+								</p>
+
+								<label>Impuestos y tasas no incluidos</label>
+
+								<div>
+									<button class="contenedor-hotel-price-button">
+										Ver hotel
+									</button>
+								</div>
+
+								<label> <strong>Pagá en cuotas</strong></label>
+							</div>
+						</div>
+					</div>
+			</div>
+				
+			</div>
+
+
 		</div> 
 	</div>
 </div>

@@ -19,6 +19,7 @@ export class Filtrador {
 					hoteles[i].name,
 					hoteles[i].stars,
 					hoteles[i].price,
+					hoteles[i].imageURL,
 				))
 		}
 

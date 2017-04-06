@@ -3,6 +3,7 @@ export class Hotel {
         public _id?: string,
         public name?: string,
         public stars?: number,
-        public price?: number
+        public price?: number,
+        public imageURL?: string
         ){}
 }

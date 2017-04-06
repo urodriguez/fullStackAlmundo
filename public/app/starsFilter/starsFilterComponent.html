@@ -46,26 +46,26 @@
 
             <div class="checkbox">
               <label>
-          		<input 
-          			*ngIf="showingAllStars"
-          			type="checkbox"
-          			#cb (change)="onFilteredStarsChange(i, cb.checked)"
-          		>
+            		<input 
+            			*ngIf="showingAllStars"
+            			type="checkbox"
+            			#cb (change)="onFilteredStarsChange(i, cb.checked)"
+            		>
 
-          		<input 
-          			*ngIf="!showingAllStars && wasSelected(i)"
-          			type="checkbox" 
-          			checked 
-          			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
+            		<input 
+            			*ngIf="!showingAllStars && wasSelected(i)"
+            			type="checkbox" 
+            			checked 
+            			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
 
-          		<input 
-          			*ngIf="!showingAllStars && !wasSelected(i)"
-          			type="checkbox" 
-          			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
+            		<input 
+            			*ngIf="!showingAllStars && !wasSelected(i)"
+            			type="checkbox" 
+            			#cb (change)="onFilteredStarsChange(i, cb.checked)">	
 
-	        	<label *ngFor="let sDOM of starDOM">
-					<i class="fa fa-star" aria-hidden="true"></i>
-	        	</label>
+    	        	<label *ngFor="let sDOM of starDOM">
+                  <i class="fa fa-star" aria-hidden="true"></i>
+    	        	</label>
 
                 <a>({{numberStarsPerHotel[i]}})</a>
               </label>

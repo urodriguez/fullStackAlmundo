@@ -37,7 +37,8 @@ exports.add = function(req, res) {
     var hotel = new Hotel({ //creo un nuevo hotel en base a lo recibido en el request
         name:    req.body.name,
         stars:   req.body.stars,
-        price:   req.body.price
+        price:   req.body.price,
+        imageURL: req.body.imageURL
     });
 
     hotel.save(function(err, hotel) { //almaceno el hotel en la base de datos
@@ -57,6 +58,7 @@ exports.update = function(req, res) {
         hotel.name =   	req.body.name;
         hotel.stars =   req.body.stars;
         hotel.price =   req.body.price;
+        hotel.imageURL =   req.body.imageURL;
 
         hotel.save(function(err) { //almaceno en la base "hotel" para que quede actualizada con los nuevos cambios
             if(err) return res.status(500).send(err.message);

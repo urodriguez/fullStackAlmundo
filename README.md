@@ -6,6 +6,12 @@ https://trello.com/b/hgoquOSW/fullstack-almundo
 
 Se pueden visualizar las *HE* (horas estimadas) vs las *HC* (horas consumidas) de cada tarjeta en el apartado *comentarios* de la misma
 
+# Stack utilizado
+1. Bootstrap 4
+2. Angular 2
+3. NodeJS
+4. Mongoose (MongoDB)
+
 
 # Componetes requeridos
 1. Descargar e instalar node.js (última version que viene con npm)
@@ -21,3 +27,9 @@ Se pueden visualizar las *HE* (horas estimadas) vs las *HC* (horas consumidas) d
 1. Levantar terminal parado sobre RAIZ
 2. Ejecutar "npm install"
 3. Ejecutar "npm start"
+
+# Acceso al módulo hoteles
+1. Haber compilado los archivos de TypeScript
+2. Haber levantado el servidor
+3. Acceder a: http://localhost:3000/hoteles
+
